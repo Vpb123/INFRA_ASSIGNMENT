@@ -28,9 +28,9 @@ services:
     ports:
       - "51005:51005"
     depends_on:
-      mysql:
+      - mysql:
         condition: service_started
-      mongo:
+      - mongo:
         condition: service_started
  
 
