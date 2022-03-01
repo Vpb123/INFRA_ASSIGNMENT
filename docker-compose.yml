@@ -28,8 +28,10 @@ services:
     ports:
       - "51005:51005"
     depends_on:
-      - mysql
-      - mongo
+      mysql:
+        condition: service_started
+      mongo:
+        condition: service_started
  
 
 volumes:
